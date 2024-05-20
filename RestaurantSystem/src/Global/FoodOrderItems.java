@@ -1,9 +1,9 @@
-package pack1;
+package Global;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
-public class Variables {
+//All variables declared here
+public class FoodOrderItems {
 	public LocalDateTime currentDateTime = LocalDateTime.now();
 	public DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 	public String formattedDateTime = currentDateTime.format(formatter);
@@ -80,7 +80,7 @@ public class Variables {
 	}
 
 	public static void setUsername(String username) {
-		Variables.username = username;
+		FoodOrderItems.username = username;
 	}
 
 	public static String getPassword() {
@@ -88,7 +88,7 @@ public class Variables {
 	}
 
 	public static void setPassword(String password) {
-		Variables.password = password;
+		FoodOrderItems.password = password;
 	}
 
 	public String getCardNo() {

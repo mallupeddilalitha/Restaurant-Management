@@ -1,4 +1,4 @@
-package pack2;
+package Functionality;
 
 public interface Login
 

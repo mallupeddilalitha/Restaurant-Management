@@ -1,14 +1,15 @@
-package pack1;
+package Global;
 
 
-import pack2.FoodMain;
+import Functionality.FoodMain;
 
 
 public class RestaurantMainClass extends FoodMain {
+	
 	public static void main(String[] args) throws Exception {
 		System.out.println("-----------Welcome to Best Biryani restaurant!-----------");
 	
-			Waiter waiter = new Waiter();
+			WaiterLogin waiter = new WaiterLogin();
 			
 			waiter.login();
 		

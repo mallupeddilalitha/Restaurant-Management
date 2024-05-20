@@ -1,10 +1,10 @@
-package pack1;
+package Global;
 
 import java.util.Scanner;
 
-import pack2.FoodMain;
+import Functionality.FoodMain;
 
-public class Waiter {
+public class WaiterLogin {
 
 	public void login() throws Exception {
 		Scanner sc = new Scanner(System.in);

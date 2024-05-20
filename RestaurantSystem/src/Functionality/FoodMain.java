@@ -1,12 +1,14 @@
-package pack2;
+package Functionality;
 
 import java.io.BufferedWriter;
 
 import java.io.FileWriter;
-
+import java.io.IOException;
 import java.util.Scanner;
 
-import pack1.Variables;
+import Global.FoodOrderItems;
+
+// complete order and billing details 
 
 public class FoodMain implements Login
 
@@ -14,7 +16,7 @@ public class FoodMain implements Login
 
 	Scanner sc = new Scanner(System.in);
 
-	protected Variables v = new Variables();
+	protected FoodOrderItems v = new FoodOrderItems();
 
 	int index[] = new int[20];
 
@@ -70,7 +72,7 @@ public class FoodMain implements Login
 
 	}
 
-	void billData() throws Exception // Entering Data in the Restaurant_Data.txt file.
+	void billData() throws IOException // Entering Data in the Restaurant_Data.txt file.
 
 	{
 
@@ -99,7 +101,7 @@ public class FoodMain implements Login
 
    
 
-	public void mainMenu() throws Exception
+	public void mainMenu() throws InterruptedException
 
 	{
 
@@ -123,7 +125,12 @@ public class FoodMain implements Login
 
 			case 1:
 
-				menu(); // VEG
+				try {
+					menu();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} // VEG
 
 				v.setValidCode(true);
 
@@ -131,7 +138,12 @@ public class FoodMain implements Login
 
 			case 2:
 
-				menu(0); // NON-VEG
+				try {
+					menu(0);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} // NON-VEG
 
 				v.setValidCode(true);
 
@@ -139,7 +151,12 @@ public class FoodMain implements Login
 
 			case 3:
 
-				menu("Java is Awesome"); // Drinks
+				try {
+					menu("Java is Awesome");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} // Drinks
 
 				v.setValidCode(true);
 
@@ -155,7 +172,7 @@ public class FoodMain implements Login
 
 	}
 
-	void menu() throws Exception // veg
+	void menu() throws InterruptedException  // veg
 
 	{
 
@@ -197,7 +214,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(180, v.getN_plates());
+				try {
+					bill(180, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -209,7 +231,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(200, v.getN_plates());
+				try {
+					bill(200, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -221,7 +248,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(250, v.getN_plates());
+				try {
+					bill(250, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -233,7 +265,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(300, v.getN_plates());
+				try {
+					bill(300, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -245,7 +282,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(180, v.getN_plates());
+				try {
+					bill(180, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -261,7 +303,7 @@ public class FoodMain implements Login
 
 	}
 
-	void menu(int a) throws Exception // Non-veg
+	void menu(int a) throws InterruptedException  // Non-veg
 
 	{
 
@@ -303,7 +345,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(250, v.getN_plates());
+				try {
+					bill(250, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -315,7 +362,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(320, v.getN_plates());
+				try {
+					bill(320, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -327,7 +379,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(280, v.getN_plates());
+				try {
+					bill(280, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -339,7 +396,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(350, v.getN_plates());
+				try {
+					bill(350, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -351,7 +413,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(320, v.getN_plates());
+				try {
+					bill(320, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -367,7 +434,7 @@ public class FoodMain implements Login
 
 	}
 
-	void menu(String s) throws Exception // Drinks
+	void menu(String s) throws InterruptedException  // Drinks
 
 	{
 
@@ -409,7 +476,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(50, v.getN_plates());
+				try {
+					bill(50, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -421,7 +493,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(60, v.getN_plates());
+				try {
+					bill(60, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -433,7 +510,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(60, v.getN_plates());
+				try {
+					bill(60, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -445,7 +527,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(45, v.getN_plates());
+				try {
+					bill(45, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -457,7 +544,12 @@ public class FoodMain implements Login
 
 				v.setN_plates(sc.nextInt());
 
-				bill(20, v.getN_plates());
+				try {
+					bill(20, v.getN_plates());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				v.setValidCode(true);
 
@@ -507,7 +599,7 @@ public class FoodMain implements Login
 
 	}
 
-	void bill(int p, int n) throws Exception
+	void bill(int p, int n) throws InterruptedException 
 
 	{
 
@@ -626,7 +718,12 @@ public class FoodMain implements Login
 
 					System.out.println("Your Final Bill is Rs." + v.getUpdateBill_v());
 
-					billData(); // Storing data in the Restaurant_Data File.
+					try {
+						billData();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} // Storing data in the Restaurant_Data File.
 
 					// Payment options
 
@@ -760,26 +857,6 @@ public class FoodMain implements Login
 				}
 			}
 		}
-	}
-
-	public void displayMenu() {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void addMenuItem(String newName, String newPrice) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void removeMenuItem(String itemName) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void updateMenuItem(String itemName, String newPrice) {
-		// TODO Auto-generated method stub
-
 	}
 
 }
