@@ -348,7 +348,7 @@ public class FoodMain implements Login
 				try {
 					bill(250, v.getN_plates());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				}
 
@@ -365,7 +365,7 @@ public class FoodMain implements Login
 				try {
 					bill(320, v.getN_plates());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 
@@ -382,7 +382,7 @@ public class FoodMain implements Login
 				try {
 					bill(280, v.getN_plates());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+		
 					e.printStackTrace();
 				}
 
@@ -399,7 +399,7 @@ public class FoodMain implements Login
 				try {
 					bill(350, v.getN_plates());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 
@@ -416,7 +416,7 @@ public class FoodMain implements Login
 				try {
 					bill(320, v.getN_plates());
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+				
 					e.printStackTrace();
 				}
 

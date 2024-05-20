@@ -26,7 +26,7 @@ public class FoodOrderItems {
 	private String cardNo;
 
 	private int count = 0;
-	private int option; // main options [veg,non-veg,Drinks]
+	private int option; // main options [ veg ,non-veg,Drinks]
 	private int n_plates;
 	private int opt; // continue or exit
 	private int bill_v = 0;
@@ -163,9 +163,5 @@ public class FoodOrderItems {
 		this.feedback = feedback;
 	}
 
-	public String[] getManagerAddedItems() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
